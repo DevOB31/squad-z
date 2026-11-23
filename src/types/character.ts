@@ -4,6 +4,6 @@ export interface Character {
   ki: string;
   race: string;
   gender: string;
-  description?: string;
+  description: string;
   image: string;
 }
