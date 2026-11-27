@@ -1,4 +1,5 @@
 import { useCharacters } from "./hooks/useCharacters";
+import { CharacterCard } from "./components/CharacterCard";
 
 function App() {
   const { characters } = useCharacters();
@@ -11,10 +12,12 @@ function App() {
       <p>Lista de personajes</p>
       <ul>
         {characters.map((character) => (
-          <li key={character.id}>
-            {character.name}
-            <p>{character.description}</p>
-          </li>
+          <CharacterCard
+            key={character.id}
+            name={character.name}
+            description={character.description}
+            image={character.image}
+          />
         ))}
       </ul>
     </>
